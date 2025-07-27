@@ -8,16 +8,25 @@
     <link rel="stylesheet" href="/assets/css/theme.css" />
   </head>
   <body>
-    <main class="vault-shell">
-      <div class="terminal-glow">
-        <h1 class="intro-glitch">{{ page.title }}</h1>
-        {% if page.date %}
-          <p class="subglow">logged: {{ page.date | date: "%Y-%m-%d" }}</p>
-        {% endif %}
-      </div>
-      <article class="log-entry">
-        {{ content }}
-      </article>
-    </main>
+  <main class="vault-shell">
+  <div class="terminal-glow">
+    <h1 class="intro-glitch">{{ page.title }}</h1>
+    {% if page.date %}
+      <p class="subglow">logged: {{ page.date | date: "%Y-%m-%d" }}</p>
+    {% endif %}
+  </div>
+
+  <div class="window-frame">
+    <div class="window-topbar">
+      <div class="window-btn btn-close"></div>
+      <div class="window-btn btn-min"></div>
+      <div class="window-btn btn-max"></div>
+      <span class="window-title">ultralog_{{ page.date | date: "%d%m%y" }}.terminal</span>
+    </div>
+    <article class="log-entry">
+      {{ content }}
+    </article>
+  </div>
+</main>
   </body>
 </html>
