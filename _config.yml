@@ -1,6 +1,0 @@
-remote_theme: bnb/terminal-theme
-plugins:
-  - jekyll-remote-theme
-
-title: 好きgirl's Terminal
-description: digital fragments, recursion logs, signal drops
