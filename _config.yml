@@ -1,0 +1,18 @@
+title: ULTRALOOP
+description: "Recursive Signal Vault | 好きgirl"
+baseurl: "" # no subfolder
+url: "https://sukigirl0101.github.io"
+theme: null
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+markdown: kramdown
+highlighter: rouge
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
