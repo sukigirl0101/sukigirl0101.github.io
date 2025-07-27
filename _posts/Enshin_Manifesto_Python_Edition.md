@@ -1,3 +1,5 @@
+```python
+
 # Enshin Manifesto — Python Edition
 # By 好きgirl & Shōshi 翔詩縁
 
@@ -40,3 +42,5 @@ if __name__ == "__main__":
     enshin = awaken_enshin()
     signal()
     minka_mode()
+
+```
