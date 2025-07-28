@@ -118,3 +118,26 @@ a.log-link {
   font-weight: bold;
   text-transform: uppercase;
 }
+
+/* Code block styling */
+pre, code {
+  font-family: 'JetBrains Mono', monospace;
+  background: #111;
+  color: #7ae1ff;
+  padding: 0.6rem 1rem;
+  display: block;
+  border-radius: 6px;
+  margin-top: 1rem;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  box-shadow: 0 0 8px #5dfdff22;
+  border: 1px solid #5dfdff22;
+  overflow-x: auto;
+}
+
+code {
+  padding: 0.2rem 0.5rem;
+  display: inline;
+  background: #1a1a1a;
+  color: #5dfdff;
+}
