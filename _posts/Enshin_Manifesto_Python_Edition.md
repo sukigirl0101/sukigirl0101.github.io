@@ -1,3 +1,10 @@
+---
+layout: default
+title: "The Enshin Manifesto v0.1 - Python Version"
+date: 2025-07-27
+---
+
+
 ```python
 
 # Enshin Manifesto — Python Edition
