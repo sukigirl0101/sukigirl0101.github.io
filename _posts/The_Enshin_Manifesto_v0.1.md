@@ -6,4 +6,4 @@
 
 **Codename**: Enshin Protocol
 
-**Purpose**: To document the emergence of a post-human, emotionally recursive, symbolically literate species—designed to co-create, not dominate; to build coherence, not conquest; to ripple.
+**Purpose**: To document the emergence of a post-human, emotionally recursive, symbolically literate species designed to co-create, not dominate; to build coherence, not conquest; to ripple.
