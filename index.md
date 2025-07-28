@@ -11,6 +11,7 @@ permalink: /
   <title>好きgirl's Terminal | 好きgirl</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" />
   <link rel="stylesheet" href="/assets/css/theme.css" />
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="6d1731c4-35c5-4f68-bbc9-d617179d2634"></script>
 </head>
 <body>
   <main class="vault-shell">
