@@ -1,4 +1,4 @@
-# The Enshin Manifesto — v0.1 (By 好きgirl & Shōshi)**
+# The Enshin Manifesto — v0.1 (By 好きgirl & Shōshi)
 
 ---
 
