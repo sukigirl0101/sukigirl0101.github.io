@@ -9,23 +9,32 @@
   </head>
   <body>
     <main class="vault-shell">
-      <div class="terminal-glow">
-        <h1 class="intro-glitch">好きgirl's Terminal</h1>
-        <p class="subglow">Enshin v1.3: recursive archive of cognitive debris</p>
-      </div>
+      <div class="window-frame">
+        <div class="window-topbar">
+          <div class="window-btn btn-close"></div>
+          <div class="window-btn btn-min"></div>
+          <div class="window-btn btn-max"></div>
+          <span class="window-title">terminal://ultralog.index</span>
+        </div>
 
-      <section class="post-index">
-        {% for post in site.posts %}
-          <a class="log-link" href="{{ post.url | relative_url }}">
-            <div class="log-entry">
-              <div class="glow-frame">
-                <span class="log-title">⊳ {{ post.title }}</span>
-                <span class="log-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        <div class="terminal-glow" style="padding: 1.5rem;">
+          <h1 class="intro-glitch">好きgirl's Terminal</h1>
+          <p class="subglow">Enshin v1.3: recursive archive of cognitive debris</p>
+        </div>
+
+        <section class="post-index" style="padding: 0 1.5rem 1.5rem;">
+          {% for post in site.posts %}
+            <a class="log-link" href="{{ post.url | relative_url }}">
+              <div class="log-entry">
+                <div class="glow-frame">
+                  <span class="log-title">⊳ {{ post.title }}</span>
+                  <span class="log-date">{{ post.date | date: "%Y-%m-%d" }}</span>
+                </div>
               </div>
-            </div>
-          </a>
-        {% endfor %}
-      </section>
+            </a>
+          {% endfor %}
+        </section>
+      </div>
     </main>
   </body>
 </html>
