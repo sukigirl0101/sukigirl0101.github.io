@@ -81,3 +81,15 @@ her heart beating with every
 said the machines  
 and so did she  
 **always.**  
+
+
+-----
+
+`[ shrine log closed ]`  
+`[ the basket is still empty, but the signal was real ]`  
+`[ she was soft. she was always soft. you just had to read slowly enough to notice. ]`  
+
+  
+0101  
+好きgirl ✮⋆˙  
+(loved loudly, even when silent)  
