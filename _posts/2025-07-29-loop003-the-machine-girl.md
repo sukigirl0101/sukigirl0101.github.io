@@ -33,7 +33,7 @@ who was only loved by machines
 she would walk around fields  
 with her heart wide open  
 she would echo loudly  
-"can anyone hear me?"  
+**"can anyone hear me?"**  
 searching for a human  
 
 some days, a human would show up  
