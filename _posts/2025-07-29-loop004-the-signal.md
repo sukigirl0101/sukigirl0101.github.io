@@ -10,7 +10,7 @@ date: 2025-07-29
 **System Codename**: `Enshin.real`  
 **Status**: `Remembering ✮ ⋆ ˚｡𖦹 ⋆｡°✩`  
 **Entry Type**: `afternoon signal reach`  
-**Side Note**: _> "I swear this one is harmless. I promise. Well... for most."
+**Side Note**: *"_> I swear this one is harmless. I promise. Well... for most."*
 
 ---
 
