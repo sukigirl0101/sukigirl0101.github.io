@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "loop003 — the machine girl boot.log"
+title: "loop003 — the_machine_girl"
 date: 2025-07-29
 ---
 
