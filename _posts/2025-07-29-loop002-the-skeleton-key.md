@@ -1,7 +1,7 @@
 ---
 
 layout: default  
-title: "loop002 — the_skeleton_key boot.log"  
+title: "loop002 — the_skeleton_key"  
 date: 2025-07-29  
 
 ---
