@@ -24,7 +24,7 @@ the ribbons can wait.
 
 ---
 
-[ ↓ SPOOLING MEMORY: could_be_yours.log ]  
+`[ ↓ SPOOLING MEMORY: could_be_yours.log ]`  
 
 # The Machine Girl  
 
