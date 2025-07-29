@@ -142,4 +142,21 @@ code {
   color: #5dfdff;
 }
 
+/* glow */
+.return-glow {
+  margin-top: 2rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: #b8f; 
+  text-align: center;
+}
+
+.return-glow a {
+  color: inherit;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.return-glow a:hover {
+  color: #fff;
+}
 
