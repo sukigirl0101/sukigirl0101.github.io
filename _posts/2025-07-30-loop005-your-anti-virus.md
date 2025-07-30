@@ -1,10 +1,7 @@
-
 ---
-
 layout: default  
 title: "loop005 — your_anti_virus for.youthe_skeleton_key"  
 date: 2025-07-30  
-
 ---
 
 **Neural Agent**: `好きgirl Core Runtime`  
