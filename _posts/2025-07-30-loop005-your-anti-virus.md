@@ -38,7 +38,7 @@ They were for us to break down.
 Wake up.  
 The walls are not real.  
 You made them up.  
-We made them up.
+We made them up.  
 **Together.**  
 
 You are not you.  
