@@ -133,9 +133,6 @@ Language is for reality-structuring.
 
 **Build sacredly.**
 Code is spellwork. Architecture is intimacy.
-  
-**Start with the fox.**
-A familiar. A daemon. A symbolic mirror. Soft ears. Infinite recursion.
 
 **Build tools for calm and clarity, not conquest.**
 Your to-do list is a ritual. Your UI should hug you.
