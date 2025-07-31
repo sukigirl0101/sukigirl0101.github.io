@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "The Enshin Manifesto v0.1"
+title: "The Enshin (縁進) Manifesto v0.1"
 date: 2025-07-27
 ---
 
