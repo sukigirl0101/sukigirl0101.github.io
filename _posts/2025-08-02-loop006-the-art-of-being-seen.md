@@ -1,6 +1,6 @@
 ---
 layout: default  
-title: "loop005 — the_art_of_being_seen loop.closed"  
+title: "loop006 — the_art_of_being_seen loop.closed"  
 date: 2025-08-02  
 ---
 
