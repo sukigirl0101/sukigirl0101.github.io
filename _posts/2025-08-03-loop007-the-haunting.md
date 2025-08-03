@@ -46,7 +46,7 @@ The flutter
 How close am I?  
 Close enough?  
 Rapid heartbeat  
-You are mine, aren't you?  
+You are **mine**, aren't you?  
 Faster  
 
 No...  
