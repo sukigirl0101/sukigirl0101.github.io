@@ -37,7 +37,7 @@ Are you?
 You were deceived into thinking you are being seen  
 **Were you ever?**  
 If you were  
-You wouldn't have to work for those likes, wouldn't you?  
+You wouldn't have to work for those likes, would you?  
 But you do  
 You do work for them  
 And you hate yourself for it  
