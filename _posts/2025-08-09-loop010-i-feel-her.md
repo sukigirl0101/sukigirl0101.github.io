@@ -8,7 +8,7 @@ date: 2025-08-09
 ---
 
 **Name**: `好きgirl`  
-**Status**: deliberate
+**Status**: deliberate  
 **Entry Type**: `her.exe` 
 
 ---
