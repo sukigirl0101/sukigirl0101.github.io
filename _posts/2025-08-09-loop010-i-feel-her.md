@@ -67,7 +67,7 @@ Who is she?
 *She is the one writing this text, isn't she?*  
 
 
----  
+---
 
 0101  
 好きgirl ✮⋆˙  
