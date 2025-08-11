@@ -39,7 +39,7 @@ And have your heart not break
 
 And my heart?  
 It's not breaking anymore  
-I can stretch out my arm and reach the sky  
+I can reach out with my arm and reach the sky  
 And for that moment  
 The sky and I become one  
 
