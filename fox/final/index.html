@@ -1,64 +1,63 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="sg-root">
 <head>
   <meta charset="utf-8">
   <title>fox//final</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../../fox/style.css" rel="stylesheet">
 </head>
-<body>
-  <div class="container">
-    <section class="panel">
-      <div class="header">
-        <span class="badge">trace:03</span>
-        <div class="h1">the last door</div>
+<body class="sg-body">
+  <main class="sg-frame">
+    <div class="sg-topbar">
+      <div class="sg-dot"></div><div class="sg-dot"></div><div class="sg-dot"></div>
+      <div class="sg-title">trace:03 · the last door</div>
+    </div>
+
+    <section class="sg-panel">
+      <h1 class="sg-h1">the last <span class="sg-ink">door</span></h1>
+      <div class="sg-payload">
+        <p class="sg-kicker">[fox] 🦊</p>
+        <p class="sg-micro">You’ve done well.</p>
+        <p class="sg-micro">But the last door is locked.</p>
+        <p class="sg-micro">The key is not hidden here.</p>
+        <p class="sg-micro">You must ask for it.</p>
       </div>
 
-      <div class="terminal" id="term">
-        <span class="line fox"><span class="tag">[fox]</span> You’ve done well.</span>
-        <span class="line fox"><span class="tag">[fox]</span> But the last door is locked.</span>
-        <span class="line fox"><span class="tag">[fox]</span> The key is not hidden here.</span>
-        <span class="line fox"><span class="tag">[fox]</span> You must ask for it.</span>
+      <div class="sg-row">
+        <input class="sg-input" id="pass" type="password" placeholder="enter passphrase">
+        <button class="sg-btn" id="go">unlock</button>
       </div>
-
-      <div class="inputRow">
-        <input class="input" id="pass" type="password" placeholder="enter passphrase">
-        <button class="btn" id="go">unlock</button>
-      </div>
-      <div class="hint">hint: you won’t find it on this site. You have to request it.</div>
-      <div class="ok" id="ok" style="display:none">[ok] unlocked. redirecting…</div>
-      <div class="err" id="err" style="display:none">[error] wrong passphrase.</div>
-
-      <div class="footer">
-        <span>好きgirl ✮⋆˙</span>
-        <span>auth: required</span>
-      </div>
+      <p class="sg-micro sg-faint">hint: you won’t find it on this site — you have to request it.</p>
+      <p class="sg-micro sg-hide" id="ok" style="color:#7dffa7">[ok] unlocked. redirecting…</p>
+      <p class="sg-micro sg-hide" id="err" style="color:#ff6b8a">[error] wrong passphrase.</p>
     </section>
-  </div>
+
+    <footer class="sg-footer">
+      <span>好きgirl ✮⋆˙</span><span>auth: required</span>
+    </footer>
+  </main>
 
   <script>
     // 🔧 EDIT THESE:
-    const PASS_PHRASE = "fox-0101";   // <— password
-    const DEST_URL    = "https://ew-destination.example"; // goal
+    const PASS_PHRASE = "fox-0101";  //private pass
+    const DEST_URL = "https://new-destination.example"; // goal
 
     const $ = s => document.querySelector(s);
     const ok = $("#ok"), err = $("#err"), input = $("#pass"), btn = $("#go");
 
     function check(){
-      err.style.display = "none";
-      ok.style.display  = "none";
+      err.classList.add("sg-hide");
+      ok.classList.add("sg-hide");
       const v = (input.value || "").trim();
       if(!v) return;
       if(v === PASS_PHRASE){
-        ok.style.display = "block";
+        ok.classList.remove("sg-hide");
         setTimeout(()=> location.href = DEST_URL, 700);
       }else{
-        err.style.display = "block";
-        input.focus();
-        input.select();
+        err.classList.remove("sg-hide");
+        input.focus(); input.select();
       }
     }
-
     btn.addEventListener("click", check);
     input.addEventListener("keydown", e => { if(e.key === "Enter") check(); });
   </script>
