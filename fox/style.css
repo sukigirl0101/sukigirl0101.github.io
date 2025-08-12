@@ -1,4 +1,4 @@
-/* ----- namespaced so no touchy main theme ----- */
+/* ----- nooo touchy ----- */
 .sg-root {
   --bg: #131028;            /* deep blue/purple like your left pane */
   --panel: #1a1536;
@@ -106,3 +106,115 @@
   font-size: .85rem;
   display: flex; justify-content: space-between; gap: .5rem; flex-wrap: wrap;
 }
+
+
+/* ===== fox overrides ===== */
+
+/* Palette closer to your screenshot */
+.sg-root {
+  --bg: #1a1226;         /* deep indigo (left pane vibe) */
+  --panel: #141026;      /* slightly darker panel */
+  --line: #48e7ff;       /* bright cyan lines */
+  --hot: #ff5ccf;        /* neon magenta */
+  --ink: #c9fbff;        /* pale cyan for accents */
+  --text: #efe8ff;       /* soft lilac body text */
+  --muted: #b8a6e2;      /* muted labels */
+}
+
+/* Bigger default text, roomier line-height */
+.sg-body {
+  font-size: clamp(17px, 1.05vw + 14px, 19px);
+  line-height: 1.65;
+  background:
+    radial-gradient(1200px 900px at 10% -20%, rgba(255, 92, 207, .08), transparent 60%),
+    radial-gradient(1100px 800px at 110% 120%, rgba(72, 231, 255, .10), transparent 60%),
+    var(--bg);
+}
+
+/* Simpler, lighter “terminal” frame */
+.sg-frame {
+  border: 1px solid var(--line);
+  box-shadow: 0 0 .6rem var(--line), 0 0 1.4rem rgba(72,231,255,.28);
+  background: linear-gradient(180deg, rgba(20,16,38,.92), rgba(17,13,31,.92));
+}
+
+/* Minimal topbar; dots stay, lines lighter */
+.sg-topbar { border-bottom: 1px solid var(--line); }
+.sg-dot { box-shadow: 0 0 .55rem var(--line); }
+.sg-title { color: var(--muted); }
+
+/* Headings: smaller (you asked), but punchy */
+.sg-h1 {
+  font-size: clamp(1.25rem, 1rem + 1.4vw, 1.9rem);
+  margin: .1rem 0 .35rem;
+  letter-spacing: -0.01em;
+  text-shadow: 0 0 1.2rem rgba(201,251,255,.38);
+}
+/* Accent underline that sits below descenders cleanly */
+.sg-ink {
+  color: var(--ink);
+  border: none;
+  box-shadow: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: .2em;
+  text-decoration-color: var(--line);
+}
+
+/* Panels: keep frame strong, lighten inner borders */
+.sg-gate, .sg-payload { border-width: 1px; background: rgba(10, 7, 22, .38); }
+
+/* IBM Plex Mono for “terminal” parts + buttons */
+.sg-title, .sg-input, .sg-tag, .sg-footer, .sg-note { font-family: "IBM Plex Mono", var(--mono); }
+
+/* Inputs: darker well, bright ring on focus */
+.sg-input {
+  background: linear-gradient(180deg, #0f0b1f, #0b0918);
+  border: 1px solid var(--line);
+  color: var(--text);
+  box-shadow: inset 0 0 0 rgba(0,0,0,0);
+}
+.sg-input::placeholder { color: #a9a0d4; }
+.sg-input:focus-visible {
+  outline: none;
+  border-color: var(--line);
+  box-shadow: 0 0 0 .18rem rgba(72,231,255,.28);
+}
+
+/* Buttons: lighter/brighter neon, more legible */
+.sg-btn {
+  font-family: "IBM Plex Mono", ui-monospace, var(--mono);
+  font-weight: 700;
+  color: #0b0a16;
+  background: linear-gradient(90deg, rgba(72,231,255,.95), rgba(255,92,207,.92));
+  text-decoration: none;
+  display: inline-block;
+  border: 0;
+  border-radius: 999px;
+  padding: .65rem 1.05rem;
+  filter: none;
+  box-shadow: 0 0 .6rem rgba(72,231,255,.45), 0 0 1.1rem rgba(255,92,207,.35);
+  transition: transform .06s ease, filter .18s ease, box-shadow .18s ease;
+}
+.sg-btn:hover { filter: brightness(1.08); }
+.sg-btn:focus-visible { box-shadow:
+  0 0 .6rem rgba(72,231,255,.55),
+  0 0 1.2rem rgba(255,92,207,.45),
+  0 0 0 .18rem rgba(72,231,255,.35);
+}
+.sg-btn:active { transform: translateY(1px) scale(.99); }
+
+/* Make the “Continue / back” pair a touch roomier */
+.sg-actions { gap: .8rem; }
+
+/* Micro messages: keep space reserved, better color tokens */
+.sg-micro { min-height: 1.15em; }
+.sg-micro.ok { color: #7dffa7; }
+.sg-micro.error { color: #ff6b8a; }
+
+/* Optional: “simplistic terminal” variant
+   Add class sg-simple to <body class="sg-body sg-simple"> to enable */
+.sg-simple .sg-topbar { background: transparent; }
+.sg-simple .sg-dot { display: none; }
+.sg-simple .sg-title { margin-left: 0; opacity: .8; }
+.sg-simple .sg-gate, .sg-simple .sg-payload { background: transparent; }
