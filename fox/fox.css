@@ -1,4 +1,4 @@
-/* ----- namespaced so it won't touch your main theme ----- */
+/* ----- namespaced no touchy main theme ----- */
 .sg-root {
   --bg: #131028;            /* deep blue/purple like your left pane */
   --panel: #1a1536;
