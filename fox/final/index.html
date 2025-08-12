@@ -41,46 +41,46 @@
     </footer>
   </main>
 
+
 <script>
-  // === Paste your generated SHA-256 hex and Base64 destination here ===
-  const HASH = "d8ef3712dddfe94dd295f5ca5ccd2afe807a222ced4416d860a4ac3f6a183ac2";   // find out
-  const DEST_B64 = "aHR0cHM6Ly95b3VhcmVtaW5lLnV3dS5haS8= ";    // goal
+  // === oof ===
+  const HASH = "d8ef3712dddfe94dd295f5ca5ccd2afe807a222ced4416d860a4ac3f6a183ac2";   // key
+  const DEST_B64 = "aHR0cHM6Ly95b3VhcmVtaW5lLnV3dS5haS8=";    // door
 
   const $ = s => document.querySelector(s);
   const ok = $("#ok"), err = $("#err"), input = $("#pass"), btn = $("#go");
 
   async function sha256(s) {
-    const buf = await crypto.subtle.digest(
-      "SHA-256",
-      new TextEncoder().encode(s)
-    );
+    const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s));
     return [...new Uint8Array(buf)]
-      .map(b => b.toString(16).padStart(2,"0"))
+      .map(b => b.toString(16).padStart(2, "0"))
       .join("");
   }
 
-  async function check(){
+  async function check() {
     err.classList.add("sg-hide");
     ok.classList.add("sg-hide");
 
     const val = (input.value || "").trim();
-    if(!val) return;
+    if (!val) return;
 
-if (hash === HASH) {
-  ok.classList.remove("sg-hide");
-  setTimeout(() => {
-    const url = atob(DEST_B64); // directly decode Base64
-    location.href = url;
-  }, 700);
-} else {
-  err.classList.remove("sg-hide");
-  input.focus();
-  input.select();
-}
+    const hash = await sha256(val);
+    if (hash === HASH) {
+      ok.classList.remove("sg-hide");
+      setTimeout(() => {
+        const url = atob(DEST_B64); // direct Base64 decode
+        location.href = url;
+      }, 700);
+    } else {
+      err.classList.remove("sg-hide");
+      input.focus();
+      input.select();
+    }
+  }
 
   btn.addEventListener("click", check);
   input.addEventListener("keydown", e => {
-    if(e.key === "Enter") check();
+    if (e.key === "Enter") check();
   });
 </script>
 </body>
