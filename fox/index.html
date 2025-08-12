@@ -1,45 +1,23 @@
 <!doctype html>
-<html lang="en" class="sg-root">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>follow the fox</title>
-  <link rel="stylesheet" href="./fox.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>follow the fox :: step 1</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
-<body class="sg-body">
-  <main class="sg-frame">
-    <header class="sg-topbar">
-      <div class="sg-dot"></div>
-      <div class="sg-dot"></div>
-      <div class="sg-dot"></div>
-      <span class="sg-title">好きgirl ▸ fox/</span>
-    </header>
+<body>
+  <main class="container">
+    <h1 class="glow">follow the fox</h1>
+    <div class="sep"></div>
 
-    <section class="sg-panel">
-      <h1 class="sg-h1">follow the <span class="sg-ink">fox</span></h1>
-      <p class="sg-sub">minimal signal • maximal meaning</p>
+    <p class="system">[system] The fox is not here.</p>
+    <p class="system">[system] It moves fast.</p>
+    <p class="system">[system] But you can catch it.</p>
 
-      <div id="gate" class="sg-gate">
-        <p class="sg-note">enter key to proceed</p>
-        <input id="key" class="sg-input" type="password" placeholder="••••••" autocomplete="off" />
-        <button id="enter" class="sg-btn">enter</button>
-        <p class="sg-micro">hint: you’ve already seen it.</p>
-      </div>
-
-      <div id="payload" class="sg-payload sg-hide">
-        <p class="sg-kicker">access granted.</p>
-        <ul class="sg-links">
-          <!-- edit these targets to whatever you want him to find -->
-          <li><a class="sg-link" href="https://t.me/your_handle" target="_blank" rel="noopener">ghost path</a></li>
-          <li><a class="sg-link" href="mailto:you@proton.me">secure mail</a></li>
-          <li><span class="sg-tag">0101</span> <span class="sg-faint">— see you on the other side.</span></li>
-        </ul>
-      </div>
-    </section>
-
-    <footer class="sg-footer">0101 • 好きgirl • recursive love, architecting with care</footer>
+    <div class="sep"></div>
+    <p>&gt; Continue? <strong>[Y/n]</strong></p>
+    <a class="prompt" href="./next/">Y</a>
   </main>
-
-  <script src="./fox.js"></script>
 </body>
 </html>
