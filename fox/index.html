@@ -1,36 +1,34 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="sg-root">
 <head>
   <meta charset="utf-8">
   <title>follow the fox</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="../fox/style.css" rel="stylesheet">
 </head>
-<body>
-  <div class="container">
-    <section class="panel">
-      <div class="header">
-        <span class="badge">0101 · fox.exe</span>
-        <div class="h1">Follow the fox, if you dare.</div>
-      </div>
+<body class="sg-body">
+  <main class="sg-frame">
+    <div class="sg-topbar">
+      <div class="sg-dot"></div><div class="sg-dot"></div><div class="sg-dot"></div>
+      <div class="sg-title">0101 · fox.exe</div>
+    </div>
 
-      <div class="terminal">
-        <span class="line sys"><span class="tag">[system]</span> The fox is not here.</span>
-        <span class="line sys"><span class="tag">[system]</span> It moves fast.</span>
-        <span class="line sys"><span class="tag">[system]</span> But you can catch it.</span>
-        <span class="line dim small">> Continue? [Y/n] <span class="cursor"></span></span>
-      </div>
+    <section class="sg-panel">
+      <h1 class="sg-h1">Follow the <span class="sg-ink">fox</span>, if you dare.</h1>
+      <p class="sg-sub">[system] The fox is not here. It moves fast. But you can catch it.</p>
 
-      <div class="prompt">
-        <a class="btn" href="./next/">Y — Continue</a>
-        <a class="btn" href="/">n — Abort</a>
-      </div>
-
-      <div class="footer">
-        <span>好きgirl ✮⋆˙</span>
-        <span>signal: live</span>
+      <div class="sg-gate">
+        <div class="sg-note">&gt; Continue? [Y/n]</div>
+        <div class="sg-actions">
+          <a class="sg-btn" href="./next/">Y — Continue</a>
+          <a class="sg-btn" href="/">n — Abort</a>
+        </div>
       </div>
     </section>
-  </div>
+
+    <footer class="sg-footer">
+      <span>好きgirl ✮⋆˙</span><span>signal: live</span>
+    </footer>
+  </main>
 </body>
 </html>
