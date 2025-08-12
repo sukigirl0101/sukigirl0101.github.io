@@ -73,18 +73,26 @@
   width: 100%;
 }
 .sg-input:focus { box-shadow: var(--shadow); }
-
+/* Make .sg-btn work the same on <a> and <button> */
 .sg-btn {
-  background: linear-gradient(90deg, var(--line), var(--hot));
-  color: #0b0a16;
-  font-weight: 700;
-  border: none;
-  border-radius: 999px;
-  padding: .6rem 1rem;
-  cursor: pointer;
-  font-family: var(--sans);
+  text-decoration: none;           /* remove underline on <a> */
+  display: inline-block;           /* stable hit area for <a> */
+  outline: none;                   /* we'll draw our own ring */
+  transition: filter .18s ease, transform .06s ease, box-shadow .18s ease;
 }
-.sg-btn:hover { filter: brightness(1.06); }
+.sg-btn:active { transform: translateY(1px) scale(.99); }
+
+/* Keyboard focus ring (accessibility) */
+.sg-btn:focus-visible,
+.sg-input:focus-visible {
+  box-shadow: var(--shadow), 0 0 0 3px rgba(56,225,232,.35); /* cyan ring */
+}
+
+/* Disabled state if ever needed */
+.sg-btn[aria-disabled="true"], .sg-btn:disabled {
+  filter: grayscale(0.3) brightness(.85);
+  cursor: not-allowed;
+}
 
 .sg-row { display: grid; grid-template-columns: 1fr auto; gap: .8rem; align-items: center; margin-top: .8rem; }
 .sg-actions { display: flex; gap: .6rem; flex-wrap: wrap; margin-top: 1rem; }
