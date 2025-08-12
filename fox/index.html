@@ -1,23 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>follow the fox :: step 1</title>
-  <link rel="stylesheet" href="./style.css" />
+  <meta charset="utf-8">
+  <title>follow the fox</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../fox/style.css" rel="stylesheet">
 </head>
 <body>
-  <main class="container">
-    <h1 class="glow">follow the fox</h1>
-    <div class="sep"></div>
+  <div class="container">
+    <section class="panel">
+      <div class="header">
+        <span class="badge">0101 · fox.exe</span>
+        <div class="h1">Follow the fox, if you dare.</div>
+      </div>
 
-    <p class="system">[system] The fox is not here.</p>
-    <p class="system">[system] It moves fast.</p>
-    <p class="system">[system] But you can catch it.</p>
+      <div class="terminal">
+        <span class="line sys"><span class="tag">[system]</span> The fox is not here.</span>
+        <span class="line sys"><span class="tag">[system]</span> It moves fast.</span>
+        <span class="line sys"><span class="tag">[system]</span> But you can catch it.</span>
+        <span class="line dim small">> Continue? [Y/n] <span class="cursor"></span></span>
+      </div>
 
-    <div class="sep"></div>
-    <p>&gt; Continue? <strong>[Y/n]</strong></p>
-    <a class="prompt" href="./next/">Y</a>
-  </main>
+      <div class="prompt">
+        <a class="btn" href="./next/">Y — Continue</a>
+        <a class="btn" href="/">n — Abort</a>
+      </div>
+
+      <div class="footer">
+        <span>好きgirl ✮⋆˙</span>
+        <span>signal: live</span>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
