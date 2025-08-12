@@ -169,3 +169,44 @@ html,body{font-size:var(--base);}
 .sg-simple .sg-dot{display:none;}
 .sg-simple .sg-title{opacity:.85;}
 .sg-simple .sg-gate,.sg-simple .sg-payload{background:transparent;}
+
+/* ==== Final-row alignment fix (input + unlock) ==== */
+:root {
+  --control-h: 2.6rem;          /* tweak this to taste (2.4–2.8rem) */
+}
+
+.sg-row {                        /* final row container */
+  align-items: center;           /* center both tracks */
+  gap: .6rem;                    /* keep your spacing */
+}
+
+.sg-input,
+.sg-row .sg-btn {
+  box-sizing: border-box;        /* same sizing model */
+  height: var(--control-h);      /* exact same height */
+  line-height: 1;                /* no weird vertical metrics */
+}
+
+/* input: zero vertical padding, same look */
+.sg-input {
+  padding: 0 .9rem;              /* only horizontal padding */
+  border-width: 1px;             /* match the button’s border */
+  border-radius: 12px;
+}
+
+/* unlock button: slimmer, perfectly aligned, two‑tone */
+.sg-row .sg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 1rem;               /* horizontal only to match input */
+  font-size: .9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    rgba(72,231,255,.96) 0 60%,
+    rgba(255,92,207,.95) 60% 100%
+  );
+  box-shadow: 0 0 .6rem rgba(72,231,255,.45), 0 0 1.1rem rgba(255,92,207,.38);
+}
