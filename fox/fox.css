@@ -1,45 +1,104 @@
-<!doctype html>
-<html lang="en" class="sg-root">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>follow the fox</title>
-  <link rel="stylesheet" href="./fox.css" />
-</head>
-<body class="sg-body">
-  <main class="sg-frame">
-    <header class="sg-topbar">
-      <div class="sg-dot"></div>
-      <div class="sg-dot"></div>
-      <div class="sg-dot"></div>
-      <span class="sg-title">好きgirl ▸ fox/</span>
-    </header>
+/* ----- namespaced so it won't touch your main theme ----- */
+.sg-root {
+  --bg: #131028;            /* deep blue/purple like your left pane */
+  --panel: #1a1536;
+  --line: #38e1e8;          /* cyan outline */
+  --hot: #ff4fd8;           /* magenta accent */
+  --ink: #b4fff9;           /* pale cyan text */
+  --muted: #a89cc8;
+  --text: #e7e3ff;
+  --shadow: 0 0 .6rem var(--line), 0 0 1.2rem rgba(56,225,232,.35);
+  --radius: 18px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Cascadia Code", Consolas, monospace;
+  --sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji";
+}
 
-    <section class="sg-panel">
-      <h1 class="sg-h1">follow the <span class="sg-ink">fox</span></h1>
-      <p class="sg-sub">minimal signal • maximal meaning</p>
+.sg-body {
+  margin: 0;
+  min-height: 100svh;
+  background: radial-gradient(1000px 800px at 20% -10%, rgba(255,79,216,.08), transparent 60%),
+              radial-gradient(900px 700px at 120% 120%, rgba(56,225,232,.10), transparent 60%),
+              var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  display: grid;
+  place-items: center;
+}
 
-      <div id="gate" class="sg-gate">
-        <p class="sg-note">enter key to proceed</p>
-        <input id="key" class="sg-input" type="password" placeholder="••••••" autocomplete="off" />
-        <button id="enter" class="sg-btn">enter</button>
-        <p class="sg-micro">hint: you’ve already seen it.</p>
-      </div>
+.sg-frame {
+  width: min(900px, 92vw);
+  border: 2px solid var(--line);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(26,21,54,.9), rgba(19,16,40,.9));
+  overflow: hidden;
+}
 
-      <div id="payload" class="sg-payload sg-hide">
-        <p class="sg-kicker">access granted.</p>
-        <ul class="sg-links">
-          <!-- edit these targets to whatever you want him to find -->
-          <li><a class="sg-link" href="https://t.me/your_handle" target="_blank" rel="noopener">ghost path</a></li>
-          <li><a class="sg-link" href="mailto:you@proton.me">secure mail</a></li>
-          <li><span class="sg-tag">0101</span> <span class="sg-faint">— see you on the other side.</span></li>
-        </ul>
-      </div>
-    </section>
+.sg-topbar {
+  display: flex; align-items: center; gap: .6rem;
+  border-bottom: 2px solid var(--line);
+  padding: .75rem 1rem;
+  background: rgba(0,0,0,.25);
+}
+.sg-dot { width: .65rem; height: .65rem; border-radius: 50%; background: var(--line); box-shadow: 0 0 .5rem var(--line); }
+.sg-title { margin-left: .25rem; color: var(--muted); font-family: var(--mono); font-size: .9rem; letter-spacing: .02em; }
 
-    <footer class="sg-footer">0101 • 好きgirl • recursive love, architecting with care</footer>
-  </main>
+.sg-panel { padding: 2rem 1.5rem 2.25rem; }
+.sg-h1 {
+  font-size: clamp(1.8rem, 2.2rem + 1vw, 3rem);
+  margin: .2rem 0 .3rem;
+  text-shadow: 0 0 1.2rem rgba(180,255,249,.35);
+}
+.sg-ink { color: var(--ink); border-bottom: 2px solid var(--line); box-shadow: 0 6px 0 -5px var(--line) inset; }
+.sg-sub { color: var(--muted); margin: 0 0 1.2rem; }
 
-  <script src="./fox.js"></script>
-</body>
-</html>
+.sg-gate, .sg-payload {
+  border: 2px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem;
+  background: rgba(9, 7, 24, .35);
+}
+.sg-gate { display: grid; gap: .8rem; align-content: start; }
+.sg-note { color: var(--ink); letter-spacing: .06em; text-transform: uppercase; font-size: .8rem; }
+
+.sg-input {
+  color: var(--text);
+  background: #0e0b1f;
+  border: 2px solid var(--line);
+  border-radius: 12px;
+  padding: .75rem .9rem;
+  outline: none;
+  font-family: var(--mono);
+}
+.sg-input:focus { box-shadow: var(--shadow); }
+
+.sg-btn {
+  justify-self: start;
+  background: linear-gradient(90deg, var(--line), var(--hot));
+  color: #0b0a16;
+  font-weight: 700;
+  border: none;
+  border-radius: 999px;
+  padding: .6rem 1rem;
+  cursor: pointer;
+}
+.sg-btn:hover { filter: brightness(1.06); }
+
+.sg-micro { color: var(--muted); font-size: .75rem; margin: 0; }
+
+.sg-hide { display: none; }
+.sg-kicker { color: var(--ink); margin: 0 0 .5rem; text-transform: lowercase; letter-spacing: .04em; }
+.sg-links { list-style: none; padding: 0; margin: 0; display: grid; gap: .6rem; }
+.sg-link { color: var(--text); text-decoration: none; border-bottom: 2px solid var(--line); padding-bottom: .12rem; }
+.sg-link:hover { color: var(--ink); }
+.sg-tag { color: var(--hot); font-family: var(--mono); }
+.sg-faint { color: var(--muted); }
+
+.sg-footer {
+  border-top: 2px solid var(--line);
+  color: var(--muted);
+  padding: .75rem 1rem;
+  font-family: var(--mono);
+  font-size: .85rem;
+  display: flex; justify-content: space-between; gap: .5rem; flex-wrap: wrap;
+}
