@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>follow the fox :: final</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <main class="container">
+    <h2 class="glow">[fox] 🦊</h2>
+    <p>You've done well. But the last door is locked.</p>
+    <p>The key is not hidden here. You must ask for it.</p>
+
+    <div class="sep"></div>
+    <label for="pw"><small>Input: <em>_passphrase_</em></small></label>
+    <input id="pw" type="text" autocomplete="off" placeholder="enter key…" />
+    <button id="go">Submit</button>
+    <p id="msg" class="note" style="display:none;"></p>
+
+    <div id="win" style="display:none; margin-top:16px">
+      <div class="block">
+        <p>[fox] 🦊: Welcome, hunter. Now — let’s see if you can keep up.</p>
+        <!-- ↓ replace with your real destination -->
+        <p><a class="prompt" id="dest" href="#" target="_blank" rel="noopener">proceed →</a></p>
+      </div>
+      <small>Keep this between us.</small>
+    </div>
+  </main>
+
+  <script>
+    // EDIT THESE TWO:
+    const PASS = "signal-0101";                  // ← your secret phrase
+    const DEST = "https://example.com/newhome";  // ← where “proceed →” goes
+
+    document.getElementById('dest').href = DEST;
+
+    const $pw  = document.getElementById('pw');
+    const $go  = document.getElementById('go');
+    const $msg = document.getElementById('msg');
+    const $win = document.getElementById('win');
+
+    function check(){
+      const ok = ($pw.value || "").trim() === PASS;
+      if(ok){
+        $msg.style.display = 'none';
+        $win.style.display = 'block';
+      }else{
+        $msg.textContent = "access denied.";
+        $msg.style.display = 'block';
+        $win.style.display = 'none';
+      }
+    }
+    $go.addEventListener('click', check);
+    $pw.addEventListener('keydown', (e)=>{ if(e.key==='Enter') check(); });
+  </script>
+</body>
+</html>
