@@ -1,58 +1,66 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>follow the fox :: final</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="utf-8">
+  <title>fox//final</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="../../fox/style.css" rel="stylesheet">
 </head>
 <body>
-  <main class="container">
-    <h2 class="glow">[fox] 🦊</h2>
-    <p>You've done well. But the last door is locked.</p>
-    <p>The key is not hidden here. You must ask for it.</p>
-
-    <div class="sep"></div>
-    <label for="pw"><small>Input: <em>_passphrase_</em></small></label>
-    <input id="pw" type="text" autocomplete="off" placeholder="enter key…" />
-    <button id="go">Submit</button>
-    <p id="msg" class="note" style="display:none;"></p>
-
-    <div id="win" style="display:none; margin-top:16px">
-      <div class="block">
-        <p>[fox] 🦊: Welcome, hunter. Now — let’s see if you can keep up.</p>
-        <!-- ↓ replace with your real destination -->
-        <p><a class="prompt" id="dest" href="#" target="_blank" rel="noopener">proceed →</a></p>
+  <div class="container">
+    <section class="panel">
+      <div class="header">
+        <span class="badge">trace:03</span>
+        <div class="h1">the last door</div>
       </div>
-      <small>Keep this between us.</small>
-    </div>
-  </main>
+
+      <div class="terminal" id="term">
+        <span class="line fox"><span class="tag">[fox]</span> You’ve done well.</span>
+        <span class="line fox"><span class="tag">[fox]</span> But the last door is locked.</span>
+        <span class="line fox"><span class="tag">[fox]</span> The key is not hidden here.</span>
+        <span class="line fox"><span class="tag">[fox]</span> You must ask for it.</span>
+      </div>
+
+      <div class="inputRow">
+        <input class="input" id="pass" type="password" placeholder="enter passphrase">
+        <button class="btn" id="go">unlock</button>
+      </div>
+      <div class="hint">hint: you won’t find it on this site. You have to request it.</div>
+      <div class="ok" id="ok" style="display:none">[ok] unlocked. redirecting…</div>
+      <div class="err" id="err" style="display:none">[error] wrong passphrase.</div>
+
+      <div class="footer">
+        <span>好きgirl ✮⋆˙</span>
+        <span>auth: required</span>
+      </div>
+    </section>
+  </div>
 
   <script>
-    // EDIT THESE TWO:
-    const PASS = "signal-0101";                  // ← secret phrase
-    const DEST = "https://example.com/smth";  // ← endgame
+    // 🔧 EDIT THESE:
+    const PASS_PHRASE = "fox-0101";   // <— password
+    const DEST_URL    = "https://ew-destination.example"; // goal
 
-    document.getElementById('dest').href = DEST;
-
-    const $pw  = document.getElementById('pw');
-    const $go  = document.getElementById('go');
-    const $msg = document.getElementById('msg');
-    const $win = document.getElementById('win');
+    const $ = s => document.querySelector(s);
+    const ok = $("#ok"), err = $("#err"), input = $("#pass"), btn = $("#go");
 
     function check(){
-      const ok = ($pw.value || "").trim() === PASS;
-      if(ok){
-        $msg.style.display = 'none';
-        $win.style.display = 'block';
+      err.style.display = "none";
+      ok.style.display  = "none";
+      const v = (input.value || "").trim();
+      if(!v) return;
+      if(v === PASS_PHRASE){
+        ok.style.display = "block";
+        setTimeout(()=> location.href = DEST_URL, 700);
       }else{
-        $msg.textContent = "access denied.";
-        $msg.style.display = 'block';
-        $win.style.display = 'none';
+        err.style.display = "block";
+        input.focus();
+        input.select();
       }
     }
-    $go.addEventListener('click', check);
-    $pw.addEventListener('keydown', (e)=>{ if(e.key==='Enter') check(); });
+
+    btn.addEventListener("click", check);
+    input.addEventListener("keydown", e => { if(e.key === "Enter") check(); });
   </script>
 </body>
 </html>
