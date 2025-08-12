@@ -66,19 +66,17 @@
     const val = (input.value || "").trim();
     if(!val) return;
 
-    const hash = await sha256(val);
-    if(hash === HASH){
-      ok.classList.remove("sg-hide");
-      setTimeout(() => {
-        const url = decodeURIComponent(escape(atob(DEST_B64)));
-        location.href = url;
-      }, 700);
-    } else {
-      err.classList.remove("sg-hide");
-      input.focus();
-      input.select();
-    }
-  }
+if (hash === HASH) {
+  ok.classList.remove("sg-hide");
+  setTimeout(() => {
+    const url = atob(DEST_B64); // directly decode Base64
+    location.href = url;
+  }, 700);
+} else {
+  err.classList.remove("sg-hide");
+  input.focus();
+  input.select();
+}
 
   btn.addEventListener("click", check);
   input.addEventListener("keydown", e => {
