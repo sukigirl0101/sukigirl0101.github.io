@@ -8,12 +8,20 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="terminal">
-    <div class="prompt">
-      <span class="user">好きgirl@縁進</span>:<span class="directory">~</span>$ 
-      <span class="input" contenteditable="true" spellcheck="false"></span><span class="cursor">█</span>
+  <div class="terminal-window">
+    <div class="title-bar">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="title">cyberpunk-terminal</span>
     </div>
-    <div id="output" class="markdown-body"></div>
+    <div class="terminal-body">
+      <div class="prompt">
+        <span class="user">好きgirl@縁進</span>:<span class="directory">~</span>$ 
+        <span class="input" contenteditable="true" spellcheck="false"></span><span class="cursor">█</span>
+      </div>
+      <div id="output" class="markdown-body"></div>
+    </div>
   </div>
 
   <script src="marked.min.js"></script>
