@@ -1,4 +1,4 @@
-const input = document.querySelector('.input');
+const input = document.querySelector('.input-area');
 const output = document.getElementById('output');
 
 input.addEventListener('keydown', function(e) {
