@@ -2,17 +2,24 @@ const input = document.querySelector('.input-area');
 const output = document.getElementById('output');
 
 input.addEventListener('keydown', function(e) {
-  if (e.key === 'Enter') {
+  if (e.key === 'Enter' && !e.shiftKey) {
     e.preventDefault();
-    const markdown = input.innerText.trim();
+
+    // Get raw markdown input, normalize newlines
+    const markdown = input.textContent.trim().replace(/\n/g, '\n');
+
+    // Handle :w save
     if (markdown === ':w') {
-      output.innerHTML += '<p><em>Saved!</em></p>';
-      input.innerText = '';
+      output.innerHTML += '<p class="glow-green"><em>Saved!</em></p>';
+      input.textContent = '';
       return;
     }
+
+    // Parse markdown
     const html = marked.parse(markdown);
-    output.innerHTML += html;
-    input.innerText = '';
+    output.innerHTML += `<div class="markdown-body">${html}</div>`;
+
+    input.textContent = ''; // Clear after enter
   }
 });
 
