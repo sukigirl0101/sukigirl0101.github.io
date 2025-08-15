@@ -131,3 +131,14 @@ pre code {
   box-shadow: 0 0 20px rgba(255, 0, 255, 0.1);
   overflow-x: auto;
 }
+
+
+body,
+.input,
+#output {
+  color: #B1FF8C;
+  text-shadow:
+    0 0 4px #B1FF8C,
+    0 0 8px #B1FF8C,
+    0 0 16px rgba(177, 255, 140, 0.4);
+}
