@@ -1,7 +1,6 @@
 const input = document.querySelector('.input');
 const output = document.getElementById('output');
 
-
 input.addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
     e.preventDefault();
