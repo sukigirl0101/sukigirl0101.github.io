@@ -128,7 +128,10 @@ pre code {
   overflow-x: auto;
 }
 
-.glow-green {
+
+body,
+.input,
+#output {
   color: #B1FF8C;
   text-shadow:
     0 0 4px #B1FF8C,
