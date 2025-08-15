@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   background-color: #1a1025;
@@ -7,6 +8,23 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at center, #ff6bff44, transparent 70%),
+              radial-gradient(circle at 80% 30%, #00f5ff33, transparent 80%);
+  filter: blur(80px);
+  z-index: -1;
+  animation: glowmove 10s ease-in-out infinite alternate;
+}
+
+@keyframes glowmove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-5%, 5%); }
 }
 
 .terminal-window {
@@ -86,7 +104,6 @@ body {
   margin-top: 1rem;
 }
 
-/* Apply the markdown styles you love */
 .markdown-body h1,
 .markdown-body h2,
 .markdown-body h3 {
