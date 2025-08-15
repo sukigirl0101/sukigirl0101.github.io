@@ -1,9 +1,6 @@
 const input = document.querySelector('.input');
 const output = document.getElementById('output');
 
-window.addEventListener('DOMContentLoaded', () => {
-  typeEffect("> Initializing system...\n> Loading Fira Code...\n> Markdown ready!\n", output);
-});
 
 input.addEventListener('keydown', function(e) {
   if (e.key === 'Enter') {
