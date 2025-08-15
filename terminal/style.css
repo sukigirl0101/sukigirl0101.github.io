@@ -68,11 +68,24 @@ body::before {
 }
 
 .prompt {
-  line-height: 1.5;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  background: none;
+  border: none;
+  font-family: 'Fira Code', monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+  display: block;
   margin-bottom: 1rem;
+}
+
+.input-area {
+  display: inline;
+  outline: none;
+  background: transparent;
+  color: #B1FF8C;
+  text-shadow:
+    0 0 4px #B1FF8C,
+    0 0 8px #B1FF8C,
+    0 0 16px rgba(177, 255, 140, 0.4);
 }
 
 .user {
@@ -80,19 +93,6 @@ body::before {
 }
 .directory {
   color: #00f5ff;
-}
-
-.input {
-  outline: none;
-  background: transparent;
-  color: #f0e9ff;
-  flex: 1;
-  min-width: 10px;
-}
-
-.cursor {
-  animation: blink 1s steps(2, start) infinite;
-  color: #ff9eff;
 }
 
 @keyframes blink {
