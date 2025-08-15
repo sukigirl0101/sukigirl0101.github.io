@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyberpunk Terminal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="terminal">
+    <div class="prompt">
+      <span class="user">好きgirl@cyberpunk</span>:<span class="directory">~</span>$ 
+      <span class="input" contenteditable="true" spellcheck="false"></span><span class="cursor">█</span>
+    </div>
+    <div id="output" class="markdown-body"></div>
+  </div>
+
+  <script src="marked.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
