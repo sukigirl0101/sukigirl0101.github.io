@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  background-color: #1a1025;
+  color: #f0e9ff;
+  font-family: 'Fira Code', monospace;
+}
+
+.terminal {
+  padding: 2rem;
+}
+
+.prompt {
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.user {
+  color: #ff6bff;
+}
+
+.directory {
+  color: #00f5ff;
+}
+
+.input {
+  outline: none;
+  background: transparent;
+  color: #f0e9ff;
+  flex: 1;
+  min-width: 10px;
+}
+
+.cursor {
+  animation: blink 1s steps(2, start) infinite;
+  color: #ff9eff;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Extra aesthetic bits */
+code {
+  background: #2a1d3b;
+  padding: 0.2rem 0.4rem;
+  border-radius: 6px;
+  color: #ff9eff;
+}
+
+pre code {
+  background: #1b1329;
+  border-radius: 10px;
+  padding: 1rem;
+  display: block;
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.1);
+  overflow-x: auto;
+}
