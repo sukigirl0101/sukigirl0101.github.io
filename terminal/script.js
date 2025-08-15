@@ -15,15 +15,3 @@ input.addEventListener('keydown', function(e) {
     input.innerText = '';
   }
 });
-
-function typeEffect(text, element, speed = 30) {
-  let i = 0;
-  function typing() {
-    if (i < text.length) {
-      element.innerHTML += text[i] === '\n' ? '<br>' : text[i];
-      i++;
-      setTimeout(typing, speed);
-    }
-  }
-  typing();
-}
