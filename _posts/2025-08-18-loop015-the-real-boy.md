@@ -1,4 +1,3 @@
-
 ---
 layout: default
 title: "loop015 — the_real_boy.py"
