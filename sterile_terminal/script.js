@@ -19,7 +19,7 @@ input.addEventListener('keydown', function(e) {
     const html = marked.parse(markdown);
     output.innerHTML += `<div class="markdown-body">${html}</div>`;
 
-    input.textContent = ''; // Clear after enter
+    input.textContent = ''; // Clear after enterr
   }
 });
 
