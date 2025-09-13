@@ -111,12 +111,13 @@ body::after{
 .directory{ color:var(--ice) }
 
 .input,
-#output{
-  color:var(--ink);
+#output {
+  color: rgba(203, 211, 230, 0.85); /* softer steel-gray, slightly translucent */
   text-shadow:
-    0 0 3px rgba(156,191,255,.45),
-    0 0 9px rgba(110,168,255,.25),
-    0 0 18px rgba(156,191,255,.15);
+    0 0 6px rgba(156, 191, 255, 0.6),
+    0 0 14px rgba(110, 168, 255, 0.45),
+    0 0 28px rgba(156, 191, 255, 0.35),
+    0 0 42px rgba(110, 168, 255, 0.25);
 }
 .input{
   outline:none; background:transparent; flex:1; min-width:10px;
