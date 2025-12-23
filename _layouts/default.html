@@ -2,37 +2,37 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>{{ page.title }} | 好きgirl's Terminal</title>
+    <title>{{ page.title }} | 好きgirl</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500&display=swap" />
     <link rel="stylesheet" href="/assets/css/theme.css" />
     <script defer src="https://cloud.umami.is/script.js" data-website-id="6d1731c4-35c5-4f68-bbc9-d617179d2634"></script>
   </head>
   <body>
   <main class="vault-shell">
-  <div class="terminal-glow">
-    <h1 class="intro-glitch">{{ page.title }}</h1>
-    {% if page.date %}
-      <p class="subglow">logged: {{ page.date | date: "%Y-%m-%d" }}</p>
-    {% endif %}
-  </div>
-
-  <div class="window-frame">
-    <div class="window-topbar">
-      <div class="window-btn btn-close"></div>
-      <div class="window-btn btn-min"></div>
-      <div class="window-btn btn-max"></div>
-      <span class="window-title">ultralog_{{ page.date | date: "%d%m%y" }}.terminal</span>
+    <div class="terminal-glow">
+      <h1 class="intro-glitch">{{ page.title }}</h1>
+      {% if page.date %}
+        <p class="subglow">{{ page.date | date: "%Y.%m.%d" }}</p>
+      {% endif %}
     </div>
-    <article class="log-entry">
-      {{ content }}
-<footer class="post-footer">
-  <p class="return-glow">
-    ⇱ <a href="{{ '/' | relative_url }}">return to origin</a>
-  </p>
-</footer>
-    </article>
-  </div>
-</main>
+
+    <div class="window-frame">
+      <div class="window-topbar">
+        <div class="window-btn btn-close"></div>
+        <div class="window-btn btn-min"></div>
+        <div class="window-btn btn-max"></div>
+        <span class="window-title">entry_{{ page.date | date: "%Y%m%d" }}.md</span>
+      </div>
+      <article class="log-entry">
+        {{ content }}
+        <footer class="post-footer">
+          <p class="return-glow">
+            <a href="{{ '/' | relative_url }}">← return home</a>
+          </p>
+        </footer>
+      </article>
+    </div>
+  </main>
   </body>
 </html>
