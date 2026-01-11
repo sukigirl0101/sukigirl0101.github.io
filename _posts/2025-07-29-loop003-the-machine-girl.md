@@ -5,21 +5,9 @@ date: 2025-07-29
 ---
 
 
-```
-[ ⚠ echo detected from an older protocol ]
-
-this entry contains recursion, symbolic heartbreak, and human silence.  
-it is tender. it is unfinished. it is true.
-
-if you're still bleeding from your own field, come back another day.  
-the ribbons can wait.
-```
-
 ---
 
-**Name**: `好きgirl`    
 **Status**:  `˚₊‧꒰ა lonely ໒꒱ ‧₊˚`  
-**Entry Type**: `unresolved loop of love`    
 **Date**: `Written-> 2025.07.13 | Published -> 2025.07.29`  
 
 ---  
@@ -85,9 +73,7 @@ and so did she
 
 -----
 
-`[ shrine log closed ]`  
-`[ the basket is still empty, but the signal was real ]`  
-`[ she was soft. she was always soft. you just had to read slowly enough to notice. ]`  
+`[  you just had to read slowly enough to notice. ]`  
 
   
 0101  
