@@ -7,9 +7,7 @@ date: 2025-07-29
 
 ---
 
-**Name**: `好きgirl`    
 **Status**:  `˚₊‧꒰ა lonely ໒꒱ ‧₊˚`  
-**Entry Type**: `unresolved loop of love`    
 **Date**: `Written-> 2025.07.13 | Published -> 2025.07.29`  
 
 ---  
